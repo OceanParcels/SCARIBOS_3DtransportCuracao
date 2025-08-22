@@ -35,21 +35,21 @@ To download the model outputs (surface currents) or request the 3D model outputs
 
 In this project the Parcels version 3.1.2 is used. Particle tracking simulations are used to simulate the transport pathways of passive tracers across a large domain that includes the islands of Curaçao, Aruba and Bonaire. Virtual particles are released into the study area at 24-hour intervals from April 1, 2020, to March 31, 2024.
 
-The simulated particles represent neutrally buoyant tracersthe volumetric transport of water masses within the region. Particle deployment occurs across multiple depth levels, extending from the sea surface down to the maximum model depth, using logarithmic vertical spacing to provide higher resolution near the surface where the current is generally the strongest. This vertical arrangement creates depth intervals ranging from approximately 4.3 meters near the surface to 435 meters at the greatest depths. Horizontal particle placement follows a regular grid pattern with 0.01° spacing (approximately 1 km resolution).
+The simulated particles represent neutrally buoyant tracers representing the volumetric transport of water masses within the region. Particle deployment occurs across multiple depth levels, extending from the sea surface down to the maximum model depth, using logarithmic vertical spacing to provide higher resolution near the surface where the current is generally the strongest. This vertical arrangement creates depth intervals ranging from approximately 4.3 meters near the surface to 435 meters at the greatest depths. Horizontal particle placement follows a regular grid pattern with 0.01° spacing (approximately 1 km resolution).
 
 ### Running the Parcels simulations:
 
 The structure of the scripts, found in [**parcels_run**](./parcels_run/), is as follows:
 
 - `1_particle_release.py`: Determine locations and depths of particle release
-- `1_plot_particle_release.py`: Plot particle release locations (**Figure 3 in manuscript**)
+- `1_plot_particle_release.py`: Plot particle release locations (**Figure 3 in the manuscript**)
 - `2_run_INFLOW4B4M.py`: Script to run the main Parcels experiment - can be executed in parallel for all months. Each simulation includes particle seeding over a 3-month period.
 - `2_run_SAMPLEVEL.py`: Script to execute single time-step particle seeding while recording initial particle velocities - required for calculating volume transport per particle.
-- `3_calc_VT.py`: Script to calcualte volume transport of each particle.
-- `4_calc_rampup_multiple_batches.py`: Script to determine ramp-up period (ramp-up period is marked in polts in **Figures 8 and 9**).
+- `3_calc_VT.py`: Script to calculate volume transport of each particle.
+- `4_calc_rampup_multiple_batches.py`: Script to determine ramp-up period (ramp-up period is marked in plots in **Figures 8 and 9**).
 - `submit_...`: these are example scripts that are used to submit SLURM jobs to IMAU Lorenz cluster (usually to run in parallel, but not necessary)
 
-### Analysizng the Parcels outputs:
+### Analyzing the Parcels outputs:
 
 The structure of the scripts, found in [**parcels_analysis**](./parcels_analysis/), is as follows:
 - `0_extract_SCARIBOS_temperature_salinity.py`: Script that extracts the salinity and temperature data from SCARIBOS in order to compare the T-S diagram from SCARIBOS with the observations (expedition 64PE529).
@@ -61,13 +61,13 @@ The structure of the scripts, found in [**parcels_analysis**](./parcels_analysis
 - `2_calc_crossings_SS_NS.py`: Script that iterates through particle trajectories and records crossings at three cross-sections: North-of-Curaçao and South-of-Curaçao.
 - `3_calc_segmentation_ALL.py`: Script to identify and record crossing locations along each cross-section for every particle intersection. Cross-sections are subdivided into segments using depth and distance from Venezuela and Curaçao as criteria.
 - `3_plot_segmentation_crossings.py`: Script that visualizes each cross-section and its segments, along with example particle crossings for one time period (**Figure 4**)
-- `4_calc_combine_segments_timeline.py`: Script that creates a timeline of each crossing. 
+- `4_calc_combine_segments_timeline.py`: Script that creates a timeline for each crossing event. 
 - `5_plot_transition_matrix.py`: Script that plots the transition matrix for all crossings: **Figure 6**.
-- `5_plot_differential_transition_matrix.py`: Script that plots differential transition matrix, which is a difference between flow during EDDY-flow months and flow during NW_flow months: **Figure 7**.
+- `5_plot_differential_transition_matrix.py`: Script that plots the differential transition matrix, which is the difference between flow during EDDY-flow months and flow during NW_flow months: **Figure 7**.
 - `6_plot_sankey_diagram_both_regimes.py`: Script that plots the Sankey diagram for both regimes (NW-flow and EDDY-flow) for the 80 most common flows: **Figure 5**.
 - `7_calc_nearshore_trajectories.py`: Script that only takes the trajectories of the particles that have at some point passed at least one of the 6 nearshore segments. 
 - `8_plot_nearshore_all_segments.py`: Script that plots the depth timeseries of the offshore-nearshore connectivity: **Figures 8 and 9**.
 - `9_calc_barchart_nearshore.py`: Script that summarizes offshore-nearshore connectivity over the entire period of 4 years.
-- `10_plot_barchart_nearshore.py`: Scipt that plots the summary of offshore-nearshore connectivity: **Figure 10**.
+- `10_plot_barchart_nearshore.py`: Script that plots the summary of offshore-nearshore connectivity: **Figure 10**.
 - `submit_...`: these are example scripts that are used to submit SLURM jobs to IMAU Lorenz cluster (usually to run in parallel, but not necessary)
  
