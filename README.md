@@ -7,7 +7,7 @@ This project contains the following folders:
 ## Project Structure:
 
 - [**parcels_run**](.o/parcels_run/): Contains the scripts to run the OceanParcels experiments
-- [**parcels_analysis**](./parcels_analysis/): Contains the scripts related to particle tracking and trajectory analysis using OceanParcels.
+- [**parcels_analysis**](./parcels_analysis/): Contains scripts that process and analyze particle trajectory outputs from OceanParcels.
 
 ## Hydrodynamic input: SCARIBOS
 
