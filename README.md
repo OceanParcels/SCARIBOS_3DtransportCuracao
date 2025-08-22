@@ -52,19 +52,19 @@ The structure of the scripts, found in [**parcels_run**](./parcels_run/), is as 
 ### Analysizng the Parcels outputs:
 
 The structure of the scripts, found in [**parcels_analysis**](./parcels_analysis/), is as follows:
-- `0_extract_SCARIBOS_temperature_salinity.py`:
-- `0_calc_and_plot_water_masses.py`: 
-- `0_calc_regimes_from_croco.py`:
-- `0_plot_regimes_from_croco.py`: 
-- `1_determine_cross_sections.py`: 
-- `2_calc_crossings_KC_MP_WP.py`: 
-- `2_calc_crossings_SS_NS.py`: 
-- `3_calc_segmentation_ALL.py`: 
+- `0_extract_SCARIBOS_temperature_salinity.py`: Script that extracts the salinity and temperature data from SCARIBOS in order to compare the T-S diagram from SCARIBOS with the observations (expedition 64PE529).
+- `0_calc_and_plot_water_masses.py`: Script that calculates the water masses around Curaçao from the CTD observations during the RV _Pelagia_  expedition in January 2024 (64PE529). This scripts also plots **Figure 1**.
+- `0_calc_regimes_from_croco.py`: Script to select transects across the island (perpendicular to the coast) and calculate alongshore and cross-shore component of the velocity field there.
+- `0_plot_regimes_from_croco.py`: Script that plots these velocity transects (monthly for the 4 years from April 2020 to March 2024) and marks the months associated with NW-flow and EDDY-flow: **Figure 2**.
+- `1_determine_cross_sections.py`: Script that determines the coordinates of the 5 cross-sections on which the analysis is performed: North-of-Curaçao, West Point, Mid Point, Klein Curaçao and South-of-Curaçao.
+- `2_calc_crossings_KC_MP_WP.py`: Script that iterates through particle trajectories and records crossings at three cross-sections: West Point, Mid Point and Klein Curaçao.
+- `2_calc_crossings_SS_NS.py`: Script that iterates through particle trajectories and records crossings at three cross-sections: North-of-Curaçao and South-of-Curaçao.
+- `3_calc_segmentation_ALL.py`: Script to identify and record crossing locations along each cross-section for every particle intersection. Cross-sections are subdivided into segments using depth and distance from Venezuela and Curaçao as criteria.
 - `3_plot_segmentation_crossings.py`: Script that visualizes each cross-section and its segments, along with example particle crossings for one time period (**Figure 4**)
-- `4_calc_combine_segments_timeline.py`:
-- `5_plot_transition_matrix.py`: 
-- `5_plot_differential_transition_matrix.py`: 
-- `6_plot_sankey_diagram_both_regimes.py`: 
+- `4_calc_combine_segments_timeline.py`: Script that creates a timeline of each crossing. 
+- `5_plot_transition_matrix.py`: Script that plots the transition matrix for all crossings: **Figure 6**.
+- `5_plot_differential_transition_matrix.py`: Script that plots differential transition matrix, which is a difference between flow during EDDY-flow months and flow during NW_flow months: **Figure 7**.
+- `6_plot_sankey_diagram_both_regimes.py`: Script that plots the Sankey diagram for both regimes (NW-flow and EDDY-flow) for the 80 most common flows: **Figure 5**.
 - `7_calc_nearshore_trajectories.py`: 
 - `8_plot_nearshore_all_segments.py`: 
 - `9_calc_barchart_nearshore.py`: 
