@@ -58,7 +58,7 @@ The structure of the scripts, found in [**parcels_analysis**](./parcels_analysis
 - `0_plot_regimes_from_croco.py`: Script that plots these velocity transects (monthly for the 4 years from April 2020 to March 2024) and marks the months associated with NW-flow and EDDY-flow: **Figure 2**.
 - `1_determine_cross_sections.py`: Script that determines the coordinates of the 5 cross-sections on which the analysis is performed: North-of-Curaçao, West Point, Mid Point, Klein Curaçao and South-of-Curaçao.
 - `2_calc_crossings_KC_MP_WP.py`: Script that iterates through particle trajectories and records crossings at three cross-sections: West Point, Mid Point and Klein Curaçao.
-- `2_calc_crossings_SS_NS.py`: Script that iterates through particle trajectories and records crossings at three cross-sections: North-of-Curaçao and South-of-Curaçao.
+- `2_calc_crossings_SS_NS.py`: Script that iterates through particle trajectories and records crossings at two cross-sections: North-of-Curaçao and South-of-Curaçao.
 - `3_calc_segmentation_ALL.py`: Script to identify and record crossing locations along each cross-section for every particle intersection. Cross-sections are subdivided into segments using depth and distance from Venezuela and Curaçao as criteria.
 - `3_plot_segmentation_crossings.py`: Script that visualizes each cross-section and its segments, along with example particle crossings for one time period (**Figure 4**)
 - `4_calc_combine_segments_timeline.py`: Script that creates a timeline for each crossing event. 
