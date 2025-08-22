@@ -68,6 +68,6 @@ The structure of the scripts, found in [**parcels_analysis**](./parcels_analysis
 - `7_calc_nearshore_trajectories.py`: Script that only takes the trajectories of the particles that have at some point passed at least one of the 6 nearshore segments. 
 - `8_plot_nearshore_all_segments.py`: Script that plots the depth timeseries of the offshore-nearshore connectivity: **Figures 8 and 9**.
 - `9_calc_barchart_nearshore.py`: Script that summarizes offshore-nearshore connectivity over the entire period of 4 years.
-- `10_plot_barchart_nearshore.py`: Scipt that plots the summary of offshore-nearshore connectivity: **Figrue 10**.
+- `10_plot_barchart_nearshore.py`: Scipt that plots the summary of offshore-nearshore connectivity: **Figure 10**.
 - `submit_...`: these are example scripts that are used to submit SLURM jobs to IMAU Lorenz cluster (usually to run in parallel, but not necessary)
  
