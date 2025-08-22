@@ -65,9 +65,9 @@ The structure of the scripts, found in [**parcels_analysis**](./parcels_analysis
 - `5_plot_transition_matrix.py`: Script that plots the transition matrix for all crossings: **Figure 6**.
 - `5_plot_differential_transition_matrix.py`: Script that plots differential transition matrix, which is a difference between flow during EDDY-flow months and flow during NW_flow months: **Figure 7**.
 - `6_plot_sankey_diagram_both_regimes.py`: Script that plots the Sankey diagram for both regimes (NW-flow and EDDY-flow) for the 80 most common flows: **Figure 5**.
-- `7_calc_nearshore_trajectories.py`: 
-- `8_plot_nearshore_all_segments.py`: 
-- `9_calc_barchart_nearshore.py`: 
-- `10_plot_barchart_nearshore.py`: 
+- `7_calc_nearshore_trajectories.py`: Script that only takes the trajectories of the particles that have at some point passed at least one of the 6 nearshore segments. 
+- `8_plot_nearshore_all_segments.py`: Script that plots the depth timeseries of the offshore-nearshore connectivity: **Figures 8 and 9**.
+- `9_calc_barchart_nearshore.py`: Script that summarizes offshore-nearshore connectivity over the entire period of 4 years.
+- `10_plot_barchart_nearshore.py`: Scipt that plots the summary of offshore-nearshore connectivity: **Figrue 10**.
 - `submit_...`: these are example scripts that are used to submit SLURM jobs to IMAU Lorenz cluster (usually to run in parallel, but not necessary)
  
